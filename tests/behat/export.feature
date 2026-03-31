@@ -23,14 +23,14 @@ Feature: Test exporting wordselect questions
 
   @javascript
   Scenario: Export a wordselect question
-  When I am on the "Course 1" "core_question > course question export" page logged in as teacher1
-  And I set the field "id_format_xml" to "1"
-  And I press "Export questions to file"
-  Then following "click here" should download a file that:
+    When I am on the "Course 1" "core_question > course question export" page logged in as teacher1
+    And I set the field "id_format_xml" to "1"
+    And I press "Export questions to file"
+    Then following "click here" should download a file that:
       | Has mimetype                 | text/xml   |
       | Contains text in xml element | Word-select|
-  # If the download step is the last in the scenario then we can sometimes run
-  # into the situation where the download page causes a http redirect but behat
-  # has already conducted its reset (generating an error). By putting a logout
-  # step we avoid behat doing the reset until we are off that page.
-  And I log out
+    # If the download step is the last in the scenario then we can sometimes run
+    # into the situation where the download page causes a http redirect but behat
+    # has already conducted its reset (generating an error). By putting a logout
+    # step we avoid behat doing the reset until we are off that page.
+    And I log out
