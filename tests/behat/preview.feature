@@ -81,7 +81,7 @@ Feature: Preview a OU matrix question
   @javascript
   Scenario: Column and row headers must support and correctly render subscript, superscript.
     Given I am on the "Course 1" "core_question > course question bank" page logged in as teacher
-    And I add a "Matrix" question filling the form with:
+    And I add a "OU matrix" question filling the form with:
       | Question name                      | Matrix-single-001                                  |
       | Question text                      | Please evaluate the following chemical parameters: |
       | id_status                          | Ready                                              |
